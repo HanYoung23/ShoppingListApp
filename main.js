@@ -9,9 +9,10 @@ function removeElement(element) {
 }
 
 function outputText() {
-  ulBoard.insertAdjacentHTML(
-    "beforeend",
-    `<li class="text" 
+  if (textInput.innerText !== "") {
+    ulBoard.insertAdjacentHTML(
+      "beforeend",
+      `<li class="text" 
   style="padding: 0; 
   display: flex; 
   justify-content:space-between;
@@ -23,23 +24,20 @@ function outputText() {
   onMouseOver="this.style.color='red'"
 onMouseOut="this.style.color='black'"></i>
 </li>`
-  );
+    );
+  }
   textInput.innerText = "";
 }
 
 inputButton.addEventListener("click", () => {
-  if (textInput.innerText !== "") {
-    outputText();
-  }
+  outputText();
 });
 
 textInput.addEventListener("keypress", function (element) {
   if (element.keyCode != 13) {
     return;
   } else if (element.keyCode == 13) {
-    if (textInput.innerText !== "") {
-      outputText();
-    }
+    outputText();
   }
   element.preventDefault();
 });
