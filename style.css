@@ -41,9 +41,6 @@ section ul {
   margin: 0;
 }
 .textInput {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding: 4px 12px;
   background-color: white;
   text-emphasis-color: none;

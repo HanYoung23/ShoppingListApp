@@ -11,18 +11,18 @@ function removeElement(element) {
 function outputText() {
   ulBoard.insertAdjacentHTML(
     "beforeend",
-    `<li class="text" style="
-  padding: 0; 
+    `<li class="text" 
+  style="padding: 0; 
   display: flex; 
   justify-content:space-between;
   align-items: center;">
-  <span class="textOutput" style="white-space:nowrap;
-  padding: 4px 0; 
-  overflow: hidden;
-  text-overflow:ellipsis;">${textInput.innerText}</span>
+  <span class="textOutput"
+  style="word-break: break-word; padding: 4px 0; 
+  ">${textInput.innerText}</span>
   <i class="fas fa-trash-alt" onclick="removeElement(this)"
   onMouseOver="this.style.color='red'"
-onMouseOut="this.style.color='black'"></i></li>`
+onMouseOut="this.style.color='black'"></i>
+</li>`
   );
   textInput.innerText = "";
 }
@@ -33,7 +33,7 @@ inputButton.addEventListener("click", () => {
   }
 });
 
-textInput.addEventListener("keydown", function (element) {
+textInput.addEventListener("keypress", function (element) {
   if (element.keyCode != 13) {
     return;
   } else if (element.keyCode == 13) {
