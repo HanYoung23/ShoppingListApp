@@ -1,4 +1,5 @@
-# ShoppingListApp입니다. (프로젝트 기간 - 3일)
+# ShoppingListApp
+## ShoppingListApp입니다. (프로젝트 기간 - 3일)
 #HTML #CSS #Javascript
 
 체험하기 -> https://hanyoung23.github.io/ShoppingListApp/.
